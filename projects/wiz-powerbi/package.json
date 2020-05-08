@@ -1,0 +1,16 @@
+{
+  "name": "@wizsolucoes/wiz-powerbi",
+  "version": "1.0.0",
+  "description": "Criação de componente embed do power bi da microsoft",
+  "author": "Raul Melo Fernandez",
+  "license": "ISC",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wizsolucoes/wiz-powerbi"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  }
+}

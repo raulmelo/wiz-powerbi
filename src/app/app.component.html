@@ -1,0 +1,96 @@
+<div class="container is-fluid">
+  <div class="columns">
+    <div class="column panel " style="margin-top: 100px;">
+     <h3>Parametros</h3>
+     <form [formGroup]="form" (ngSubmit)="onFormSubmit($event)" >
+      <div class="field">
+        <label class="label">ID</label>
+        <div class="control">
+          <input class="input" formControlName="id" type="text" placeholder="Text input">
+        </div>
+        <label class="label">TOKEN</label>
+        <div class="control">
+          <input class="input" formControlName="token" type="text" placeholder="Text input">
+        </div>
+        <label class="label">embedUrl</label>
+        <div class="control">
+          <input class="input" formControlName="embedUrl" type="text" placeholder="Text input">
+        </div>
+        <label class="label">tokenType</label>
+        <div class="control">
+          <input class="input" formControlName="tokenType" type="text" placeholder="Text input">
+        </div>
+        <label class="label">type</label>
+        <div class="control">
+          <input class="input" formControlName="type" type="text" placeholder="Text input">
+        </div>
+        <label class="label">showFilterBar</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" formControlName="showFilterBar" [value]="true" name="showFilterBar">
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" formControlName="showFilterBar" [value]="false" name="showFilterBar">
+            No
+          </label>
+        </div>
+        <label class="label">showMenuButton</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" formControlName="showMenuButton" [value]="true" name="showMenuButton">
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" formControlName="showMenuButton" [value]="false" name="showMenuButton">
+            No
+          </label>
+        </div>
+        <label class="label">filters</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" formControlName="filters" [value]="true" name="filters">
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" formControlName="filters" [value]="false" name="filters">
+            No
+          </label>
+        </div>
+        <br>
+        <Button type="submit"> Enviar</Button>
+      </div>
+      </form>
+    </div>
+    <div class="column is-9">
+      <div *ngIf="showComponent" style="display: flex;height: 100%;width: 100%;">
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- COMPONENTE -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <wiz-powerbi
+        style="display: flex;height: 100%;width: 100%;"
+        [showFilterBar]="form.value.showFilterBar"
+        [showMenuButton]="form.value.showMenuButton"
+        [id]="form.value.id"
+        [token]="form.value.token"
+        [embedUrl]="form.value.embedUrl"
+        [filters]="filters"
+        >
+      </wiz-powerbi>
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      <!-- ////////// -->
+      </div>
+    </div>
+  </div>
+</div>
